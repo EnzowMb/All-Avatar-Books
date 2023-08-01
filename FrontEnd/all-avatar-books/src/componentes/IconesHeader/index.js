@@ -2,17 +2,28 @@ import toph from '../../imagens/Toph.png'
 import katara from '../../imagens/Katara.png'
 import aang from '../../imagens/Aang.png'
 import sokka from '../../imagens/Sokka.png'
-import './estilo.css'
+import styled from 'styled-components'
 
 const icones = [toph, katara, aang, sokka]
 
+const Icones = styled.ul`
+    display: flex;
+    align-items: center;
+`
+
+const Icone = styled.img`
+    margin-right: 25px;
+    width: 80px;
+    border-radius: 30px;
+`
+
 const IconesHeader = () => {
     return (
-        <ul className="icones">
-            {icones.map( (icone) => (
-                <li><img className="icone" src={icone}></img></li>
-            ) )}
-        </ul>
+        <Icones>
+            {icones.map((icone) => (
+                <li><Icone className="icone" src={icone}></Icone></li>
+            ))}
+        </Icones>
     )
 }
 
