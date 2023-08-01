@@ -1,8 +1,12 @@
 import Logo from "./componentes/Logo";
+import OpcaoHeader from "./componentes/OpcoesHeader";
 
 function App() {
   return (
-    <Logo />
+    <header>
+      <Logo />
+      <OpcaoHeader />
+    </header>
   );
 }
 
