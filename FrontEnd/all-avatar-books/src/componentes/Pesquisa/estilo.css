@@ -13,3 +13,23 @@
     text-align: center;
     width: 100%;
 }
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+p {
+    width: 200px;
+    color: #5c3026;
+}
+img {
+    width: 100px;
+    border-radius: 10px;
+}
+.resultado:hover {
+    border: 1px solid #5c3026;
+}
