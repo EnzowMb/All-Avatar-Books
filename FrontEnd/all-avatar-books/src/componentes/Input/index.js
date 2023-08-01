@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 
 const Input= styled.input`
-    order: 1px solid #FFF;
+    order: 1px solid #fcdc7b;
     background: transparent;
-    border: 1px solid #FFF;
+    border: 5px solid #5c3026;
     padding: 20px 140px;
-    border-radius: 50px;
+    border-radius: 30px;
     width: 200px;
     color: #FFF;
     font-size: 16px;
