@@ -1,12 +1,8 @@
-import Header from './componentes/Header'
-import Pesquisa from './componentes/Pesquisa';
+import Logo from "./componentes/Logo";
 
 function App() {
   return (
-    <div>
-    <Header />
-    <Pesquisa />
-    </div>
+    <Logo />
   );
 }
 
