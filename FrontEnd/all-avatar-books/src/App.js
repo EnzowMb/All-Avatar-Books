@@ -1,14 +1,11 @@
-import IconesHeader from "./componentes/IconesHeader";
-import Logo from "./componentes/Logo";
-import OpcaoHeader from "./componentes/OpcoesHeader";
+import './App.css';
+import Header from "./componentes/Header";
 
 function App() {
   return (
-    <header>
-      <Logo />
-      <OpcaoHeader />
-      <IconesHeader />
-    </header>
+    <div className='App'>
+      <Header />
+    </div>
   );
 }
 
