@@ -1,5 +1,5 @@
 const fs = require("fs")
-const { getTodasHQs, getHQPorId } = require("../servicos/hq")
+const { getTodasHQs, getHQPorId, insereHQ} = require("../servicos/hq")
 
 function getHQS(req, res) {
     try {
@@ -29,7 +29,18 @@ function getHQ(req, res) {
     }
 }
 
+function postHQ(req, res) {
+    try {
+        const hqNova = req.body
+        insereHQ(hqNova)
+    } catch (error) {
+        res.status(500)
+        res.send(error.message)
+    }
+}
+
 module.exports = {
     getHQS,
-    getHQ
+    getHQ,
+    postHQ
 }

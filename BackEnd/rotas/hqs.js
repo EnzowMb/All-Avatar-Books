@@ -1,5 +1,5 @@
 const { Router } = require("express")
-const { getHQS, getHQ } = require("../controladores/hqs")
+const { getHQS, getHQ, postHQ } = require("../controladores/hqs")
 
 const router = Router()
 
@@ -7,9 +7,7 @@ router.get('/', getHQS)
 
 router.get('/:id', getHQ)
 
-router.post('/', (req, res) => {
-    res.send('POST')
-})
+router.post('/', postHQ)
 
 router.patch('/', (req, res) => {
     res.send('PATCH')
