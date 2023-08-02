@@ -1,5 +1,5 @@
 const fs = require("fs")
-const { getTodasHQs } = require("../servicos/hq")
+const { getTodasHQs, getHQPorId } = require("../servicos/hq")
 
 function getHQS(req, res) {
     try {
@@ -11,6 +11,25 @@ function getHQS(req, res) {
     }
 }
 
+function getHQ(req, res) {
+    try {
+        const id = req.params.id
+
+        if(id && Number(id)) {
+            const hq = getHQPorId(id)
+            res.send(hq)
+        } else {
+            res.status(422)
+            res.send("Id inválido")
+        }
+
+    } catch (error) {
+        res.status(500)
+        res.send(error.message)
+    }
+}
+
 module.exports = {
-    getHQS
+    getHQS,
+    getHQ
 }

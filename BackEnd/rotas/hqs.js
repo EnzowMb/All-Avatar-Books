@@ -1,9 +1,11 @@
 const { Router } = require("express")
-const { getHQS } = require("../controladores/hqs")
+const { getHQS, getHQ } = require("../controladores/hqs")
 
 const router = Router()
 
 router.get('/', getHQS)
+
+router.get('/:id', getHQ)
 
 router.post('/', (req, res) => {
     res.send('POST')
