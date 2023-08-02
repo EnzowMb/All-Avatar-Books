@@ -19,15 +19,23 @@ const Resultado = styled.div`
     align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
+    p {
+        width: 200px;
+    }
+    img {
+        width: 100px;
+    }
+    &:hover {
+        border: 1px solid white;
+    }
 `
 
 const Pesquisa = () => {
 
     const [HQPesquisadas, setHQPesquisadas] = useState([])
-    const [tamanhoPesquisa, setTamanhoPesquisa] = useState('')
 
     return (
-        <PesquisaContainer tamanho={{tamanhoPesquisa} * 30 }>
+        <PesquisaContainer tamanho={HQPesquisadas.lenght * 30 }>
             <h2 className='Titulo'>Pesquisar HQ</h2>
             <Input
                 placeholder='Encontre sua HQ favorita!'
@@ -39,7 +47,6 @@ const Pesquisa = () => {
                         }
                     })
                     setHQPesquisadas(resultadoPesquisa)
-                    setTamanhoPesquisa(resultadoPesquisa.length)
                 }}
             />
             {HQPesquisadas.map(hq => (
