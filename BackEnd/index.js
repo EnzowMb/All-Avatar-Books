@@ -5,7 +5,7 @@ const index = express()
 
 index.use(express.json())
 
-index.use('/livros', rotaHQ)
+index.use('/hqs', rotaHQ)
 
 const port = 8000
 

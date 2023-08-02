@@ -1,5 +1,5 @@
 const fs = require("fs")
-const { getTodasHQs, getHQPorId, insereHQ} = require("../servicos/hq")
+const { getTodasHQs, getHQPorId, insereHQ, modificaHQ} = require("../servicos/hq")
 
 function getHQS(req, res) {
     try {
@@ -39,8 +39,23 @@ function postHQ(req, res) {
     }
 }
 
+function patchHQ(req, res) {
+    try {
+        const id = req.params.id
+
+        const body = req.body
+
+        modificaHQ(body, id)
+        res.send("Item modificado com sucesso!")
+    } catch (error) {
+        res.status(500)
+        res.send(error.message)
+    }
+}
+
 module.exports = {
     getHQS,
     getHQ,
-    postHQ
+    postHQ,
+    patchHQ
 }

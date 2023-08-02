@@ -19,8 +19,21 @@ function insereHQ(hqNova) {
     fs.writeFileSync("HQs.json", JSON.stringify(listaNovaHQs))
 }
 
+function modificaHQ(modficacoes, id) {
+    let hqsAtuais = JSON.parse( fs.readFileSync("HQs.json") )
+
+    const indiceModificado = hqsAtuais.findIndex(hq => hq.id === id)
+
+    const conteudoMudado = { ...hqsAtuais[indiceModificado], ...modficacoes }
+
+    hqsAtuais[indiceModificado] = conteudoMudado
+
+    fs.writeFileSync("HQs.json", JSON.stringify(hqsAtuais))
+}
+
 module.exports =  {
     getTodasHQs,
     getHQPorId,
-    insereHQ
+    insereHQ,
+    modificaHQ
 }
