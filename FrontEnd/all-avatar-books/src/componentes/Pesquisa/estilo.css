@@ -1,25 +1,9 @@
-.PesquisaContainer {
-    background-image: linear-gradient(90deg, #5AACCF 55%, #c6b3b0 110%);
-    color: #FFF;
-    text-align: center;
-    padding: 85px 0;
-    height: 270px;
-    width: 100%;
-}
 
 .Titulo {
     color: #5c3026;
     font-size: 36px;
     text-align: center;
     width: 100%;
-}
-
-.resultado {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    cursor: pointer;
 }
 
 p {
