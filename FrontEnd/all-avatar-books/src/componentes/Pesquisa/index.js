@@ -45,6 +45,7 @@ const Pesquisa = () => {
                         if(textoDigitado !== '') {
                             return hq.nome.includes(textoDigitado)
                         }
+                        return ''
                     })
                     setHQPesquisadas(resultadoPesquisa)
                 }}
@@ -52,7 +53,7 @@ const Pesquisa = () => {
             {HQPesquisadas.map(hq => (
                 <Resultado>
                     <p><strong>{hq.nome}</strong></p>
-                    <img src={hq.src} />
+                    <img src={hq.src} alt={hq.nome}/>
                 </Resultado>
             ))}
         </PesquisaContainer>

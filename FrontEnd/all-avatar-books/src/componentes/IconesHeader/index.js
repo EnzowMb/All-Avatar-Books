@@ -21,7 +21,7 @@ const IconesHeader = () => {
     return (
         <Icones>
             {icones.map((icone) => (
-                <li><Icone className="icone" src={icone}></Icone></li>
+                <li><Icone src={icone}></Icone></li>
             ))}
         </Icones>
     )

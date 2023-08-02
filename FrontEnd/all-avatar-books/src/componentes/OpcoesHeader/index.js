@@ -22,7 +22,7 @@ const OpcaoHeader = () => {
     return (
         <Opcoes>
             {textoOpcoes.map( (texto) => (
-                <Opcao className='opcao' ><p>{texto}</p></Opcao>
+                <Opcao><p>{texto}</p></Opcao>
             ) )}
         </Opcoes>
     )
