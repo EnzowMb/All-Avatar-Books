@@ -32,7 +32,16 @@ function getHQ(req, res) {
 function postHQ(req, res) {
     try {
         const hqNova = req.body
-        insereHQ(hqNova)
+
+        if(req.body.nome) {
+            insereHQ(hqNova)
+            res.status(201)
+            res.send("HQ inserida com sucesso!")
+        } else {
+            res.status(422)
+            res.send("O campo nome é obrigatorio!")
+        }
+
     } catch (error) {
         res.status(500)
         res.send(error.message)
@@ -43,10 +52,15 @@ function patchHQ(req, res) {
     try {
         const id = req.params.id
 
-        const body = req.body
+        if(id && Number(id)) {
+            const body = req.body
+            modificaHQ(body, id)
+            res.send("Item modificado com sucesso!")
+        } else {
+            res.status(422)
+            res.send("Id inválido") 
+        }
 
-        modificaHQ(body, id)
-        res.send("Item modificado com sucesso!")
     } catch (error) {
         res.status(500)
         res.send(error.message)
@@ -57,9 +71,14 @@ function deleteHQ(req, res) {
     try {
         const id = req.params.id
 
-        deletarHQPorId(id)
+        if(id && Number(id)) {
+            deletarHQPorId(id)
+            res.send("Item deletado com sucesso")
+        } else {
+            res.status(422)
+            res.send("ID inválido")
+        }
 
-        res.send("Item deletado com sucesso")
     } catch (error) {
         res.status(500)
         res.send(error.message)
