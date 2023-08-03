@@ -3,8 +3,13 @@ import katara from '../../imagens/Katara.png'
 import aang from '../../imagens/Aang.png'
 import sokka from '../../imagens/Sokka.png'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-const icones = [toph, katara, aang, sokka]
+const icones = [
+    {img: toph, nome: "toph"},
+    {img: katara, nome: "katara"},
+    {img: aang, nome: "aang"},
+    {img: sokka, nome: "sokka"}]
 
 const Icones = styled.ul`
     display: flex;
@@ -21,7 +26,7 @@ const IconesHeader = () => {
     return (
         <Icones>
             {icones.map((icone) => (
-                <li><Icone src={icone}></Icone></li>
+               <Link to={`/${icone.nome}`} ><li><Icone src={icone.img} alt={icone.nome}></Icone></li></Link> 
             ))}
         </Icones>
     )
