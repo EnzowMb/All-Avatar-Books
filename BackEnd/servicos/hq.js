@@ -31,9 +31,18 @@ function modificaHQ(modficacoes, id) {
     fs.writeFileSync("HQs.json", JSON.stringify(hqsAtuais))
 }
 
+function deletarHQPorId(id) {
+    const hqs = JSON.parse( fs.readFileSync("HQs.json") )
+
+    const hqsFiltradas = hqs.filter( hq => hq.id !== id)
+
+    fs.writeFileSync("HQs.json", JSON.stringify(hqsFiltradas))
+}
+
 module.exports =  {
     getTodasHQs,
     getHQPorId,
     insereHQ,
-    modificaHQ
+    modificaHQ,
+    deletarHQPorId
 }

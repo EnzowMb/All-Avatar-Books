@@ -1,5 +1,5 @@
 const { Router } = require("express")
-const { getHQS, getHQ, postHQ, patchHQ } = require("../controladores/hqs")
+const { getHQS, getHQ, postHQ, patchHQ, deleteHQ } = require("../controladores/hqs")
 
 const router = Router()
 
@@ -11,8 +11,6 @@ router.post('/', postHQ)
 
 router.patch('/:id', patchHQ)
 
-router.delete('/', (req, res) => {
-    res.send('Delete')
-})
+router.delete('/:id', deleteHQ)
 
 module.exports = router

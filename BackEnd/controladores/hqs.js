@@ -1,5 +1,5 @@
 const fs = require("fs")
-const { getTodasHQs, getHQPorId, insereHQ, modificaHQ} = require("../servicos/hq")
+const { getTodasHQs, getHQPorId, insereHQ, modificaHQ, deletarHQPorId} = require("../servicos/hq")
 
 function getHQS(req, res) {
     try {
@@ -53,9 +53,23 @@ function patchHQ(req, res) {
     }
 }
 
+function deleteHQ(req, res) {
+    try {
+        const id = req.params.id
+
+        deletarHQPorId(id)
+
+        res.send("Item deletado com sucesso")
+    } catch (error) {
+        res.status(500)
+        res.send(error.message)
+    }
+}
+
 module.exports = {
     getHQS,
     getHQ,
     postHQ,
-    patchHQ
+    patchHQ,
+    deleteHQ
 }
