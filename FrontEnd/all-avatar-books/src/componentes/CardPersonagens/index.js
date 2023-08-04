@@ -1,4 +1,4 @@
-import './estilo.css'
+import './estiloPersonagens.css'
 
 const CardPersonagens = ({nome, img, subtitulo, descricao}) => {
     return (

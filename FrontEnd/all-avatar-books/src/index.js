@@ -9,6 +9,7 @@ import Aang from './rotas/Aang';
 import Toph from './rotas/Toph';
 import Katara from './rotas/Katara'
 import Sokka from './rotas/Sokka'
+import Favoritos from './rotas/Favoritos';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -42,6 +43,7 @@ root.render(
         <Route path='/toph' element={<Toph />} />
         <Route path='/katara' element={<Katara />} />
         <Route path='/sokka' element={<Sokka />}/>
+        <Route path='/favoritos' element={<Favoritos />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
