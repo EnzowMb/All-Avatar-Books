@@ -1,4 +1,5 @@
 const express = require("express")
+
 const rotaHQ = require("./rotas/hqs")
 
 const index = express()

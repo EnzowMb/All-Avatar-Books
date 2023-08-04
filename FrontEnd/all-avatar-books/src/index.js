@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import Home from './rotas/Home';
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Header from './componentes/Header';
+import Aang from './rotas/Aang';
+import Toph from './rotas/Toph';
+import Katara from './rotas/Katara'
+import Sokka from './rotas/Sokka'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -30,9 +35,13 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <BrowserRouter>
+      <Header />
       <Routes>
-        <Route path="/aang" element={<p>Oi</p>} />
-        <Route path="/" element={<App />} />
+      <Route path="/" element={<Home />} />
+        <Route path="/aang" element={<Aang />} />
+        <Route path='/toph' element={<Toph />} />
+        <Route path='/katara' element={<Katara />} />
+        <Route path='/sokka' element={<Sokka />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
