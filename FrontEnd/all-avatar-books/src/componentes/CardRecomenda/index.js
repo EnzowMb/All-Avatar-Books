@@ -9,7 +9,7 @@ const CardRecomenda = ({ titulo, subtitulo, descricao, img }) => {
                 <p className="descricao" >{descricao}</p>
             </div>
             <div>
-                <img className="imgHQ" src={img} />
+                <img className="imgHQ" src={img} alt={titulo} />
                 <button className="botao" >Saiba mais</button>
             </div>
         </div>
