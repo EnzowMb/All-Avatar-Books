@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react"
 import { styled } from "styled-components"
+import { getHqsKorra } from "../servicos/hqsKorra"
 
 const AppContainer = styled.div`
     width: 100vw;
@@ -7,9 +9,23 @@ const AppContainer = styled.div`
 `
 
 const HqKorra = () => {
+
+    const [hqsKorra, setHqsKorra] = useState([])
+
+    async function fetchHqsKorra() {
+        const hqsKorraDaAPI = await getHqsKorra()
+        setHqsKorra(hqsKorraDaAPI)
+    }
+
+    useEffect(() => {
+        fetchHqsKorra()
+    }, [])
+
     return (
         <AppContainer>
-
+            {hqsKorra.map( hq => (
+                <p>{hq.nome}</p>
+            ) )}
         </AppContainer>
     )
 }
