@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Input from '../Input'
 import './estilo.css'
 import { styled } from 'styled-components'
+import { getHQS } from '../../servicos/hqs'
 
 const PesquisaContainer = styled.section`
     background-image: linear-gradient(90deg, #5AACCF 55%, #c6b3b0 110%);
@@ -34,7 +35,9 @@ const Pesquisa = () => {
     const [HQPesquisadas, setHQPesquisadas] = useState([])
     const [hqs, setHqs] = useState([])
 
-    useEffect(() => {}, [hqs])
+    useEffect(() => {
+        getHQS()
+    }, [])
 
     return (
         <PesquisaContainer tamanho={HQPesquisadas.lenght * 30 }>
