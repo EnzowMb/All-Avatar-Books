@@ -33,10 +33,11 @@ const Resultado = styled.div`
 const Pesquisa = () => {
 
     const [HQPesquisadas, setHQPesquisadas] = useState([])
-    const [hqs, setHqs] = useState([])
+    const [HQS, setHqs] = useState([])
 
     useEffect(() => {
-        getHQS()
+        const HQSdaAPI = getHQS()
+        setHqs(HQSdaAPI)
     }, [])
 
     return (
