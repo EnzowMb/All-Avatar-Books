@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import Input from '../Input'
-import './estilo.css'
 import { styled } from 'styled-components'
 import { getHQS } from '../../servicos/hqs'
 
@@ -10,6 +9,13 @@ const PesquisaContainer = styled.section`
     text-align: center;
     padding: 85px 0;
     height: ${props => props.tamanho};
+    width: 100%;
+`
+
+const Titulo = styled.h2`
+    color: #5c3026;
+    font-size: 36px;
+    text-align: center;
     width: 100%;
 `
 
@@ -46,7 +52,7 @@ const Pesquisa = () => {
 
     return (
         <PesquisaContainer tamanho={HQPesquisadas.lenght * 30 }>
-            <h2 className='Titulo'>Pesquisar HQ</h2>
+            <Titulo>Pesquisar HQ</Titulo>
             <Input
                 placeholder='Encontre sua HQ favorita!'
                 onBlur={evento => {
