@@ -36,9 +36,13 @@ const Pesquisa = () => {
     const [HQS, setHqs] = useState([])
 
     useEffect(() => {
-        const HQSdaAPI = getHQS()
-        setHqs(HQSdaAPI)
+        fetchHQS()
     }, [])
+
+    async function fetchHQS() {
+        const HQSdaAPI = await getHQS()
+        setHqs(HQSdaAPI)
+    }
 
     return (
         <PesquisaContainer tamanho={HQPesquisadas.lenght * 30 }>
