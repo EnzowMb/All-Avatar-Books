@@ -23,7 +23,7 @@ const OpcaoHeader = () => {
     return (
             <Opcoes>
                 {textoOpcoes.map( (texto) => (
-                    <Link to={`${texto.toLowerCase()}`}><Opcao><p>{texto}</p></Opcao></Link>
+                    <Link to={`${texto.toLowerCase().trim()}`}><Opcao><p>{texto}</p></Opcao></Link>
                 ) )}
             </Opcoes>
     )
