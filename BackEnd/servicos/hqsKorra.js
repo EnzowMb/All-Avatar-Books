@@ -23,5 +23,6 @@ function inserirHqsKorra(id) {
 
 module.exports = {
     getTodasHqsKorra,
-    deletaHqsKorra
+    deletaHqsKorra,
+    inserirHqsKorra
 }
