@@ -1,7 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Input from '../Input'
 import './estilo.css'
-import { HQS } from './dadosPesquisa'
 import { styled } from 'styled-components'
 
 const PesquisaContainer = styled.section`
@@ -33,6 +32,9 @@ const Resultado = styled.div`
 const Pesquisa = () => {
 
     const [HQPesquisadas, setHQPesquisadas] = useState([])
+    const [hqs, setHqs] = useState([])
+
+    useEffect(() => {}, [hqs])
 
     return (
         <PesquisaContainer tamanho={HQPesquisadas.lenght * 30 }>
