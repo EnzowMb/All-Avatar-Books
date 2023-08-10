@@ -6,8 +6,18 @@
     
 }
 
+.container {
+    background-image: linear-gradient(90deg, #5AACCF 55%, #c6b3b0 110%);
+
+    padding: 85px 0;
+    height: auto;
+    width: 100%;
+}
+
 .lista {
     align-items: center;
+    color: #5c3026;
+    text-align: center;
     background-image: linear-gradient(90deg, #e0c675 35%, #c6b3b0);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;

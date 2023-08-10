@@ -21,7 +21,7 @@ const UltimosLancamentos = () => {
     return (
         <section className="ultimos">
             <Titulo
-                cor={"#000"}
+                cor={"#dc8c24"}
                 tamanhoFonte={"36px"}
             >Ultimos Lançamentos</Titulo>
             <NovasHQsContainer>
