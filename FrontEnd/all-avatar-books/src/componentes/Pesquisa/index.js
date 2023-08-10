@@ -68,8 +68,10 @@ const Pesquisa = () => {
             />
             {HQPesquisadas.map(hq => (
                 <Resultado>
+                    <a href={`#livro${hq.id}`}>
                     <p><strong>{hq.nome}</strong></p>
                     <img src={hq.src} alt={hq.nome}/>
+                    </a>
                 </Resultado>
             ))}
         </PesquisaContainer>
