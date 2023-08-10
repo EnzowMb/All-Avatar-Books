@@ -1,34 +1,54 @@
 [
     {
-      "id": "4",
+      "id": "1",
       "nome": "Team Avatar Tales"
     },
     {
+      "id": "2",
+      "nome": "Katara and the Pirate Silver"
+    },
+    {
+      "id": "3",
+      "nome": "Suki, Alone"
+    },
+    {
+      "id": "4",
+      "nome": "The Promise"
+    },
+    {
       "id": "5",
-      "nome": "Cangaceiro Javascript"
+      "nome": "The Search"
+    },
+    {
+      "id": "6",
+      "nome": "The Rift"
     },
     {
       "id": "7",
-      "nome": "Guia básico de C#"
+      "nome": "Toph Beifong's Metalbending Academy"
     },
     {
       "id": "8",
-      "nome": "Guia básico de JavaScript"
+      "nome": "Smoke and Shadow"
     },
     {
       "id": "9",
-      "nome": "Código Limpo"
+      "nome": "North and South"
     },
     {
       "id": "10",
-      "nome": "JavaScript para iniciantes"
+      "nome": "Imbalance"
     },
     {
       "id": "11",
-      "nome": "Conhecendo o python"
+      "nome": "Free Comic Book Day"
     },
     {
       "id": "12",
-      "nome": "Imersão Alura"
+      "nome": "Turf Wars"
+    },
+    {
+      "id": "13",
+      "nome": "Ruins of the Empire"
     }
   ]

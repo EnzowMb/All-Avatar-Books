@@ -10,7 +10,7 @@ const HomeContainer = () => {
     return (
         <div>
         <Titulo cor='#fcdc7b' tamanhoFonte='36px'>Por onde começar?</Titulo>
-        <h3>Esta lista irá mostrar as HQs e a ordem de leitura!</h3>
+        <h3 className='subtitulo'>Esta lista irá mostrar as HQs e a ordem de leitura!</h3>
         <div id='livro4' className='lista'>
         <InfoHQ nomeHQ={"Team Avatar Tales"} imgHQ={teamAvatar} descricao={descricaoTeamAvatarTales}/>
         </div>
