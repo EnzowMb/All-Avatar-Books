@@ -1,6 +1,6 @@
-import { AppContainerPersonagens } from "../componentes/AppContainerPersonagens"
-import CardPersonagens from "../componentes/CardPersonagens"
-import sokkaImg from "../imagens/Sokka.png"
+import { AppContainerPersonagens } from "../../componentes/AppContainerPersonagens"
+import CardPersonagens from "../../componentes/CardPersonagens"
+import sokkaImg from "../../imagens/Sokka.png"
 
 const Sokka = () => {
 

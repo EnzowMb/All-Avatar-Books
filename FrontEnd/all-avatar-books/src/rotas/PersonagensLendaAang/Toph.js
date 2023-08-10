@@ -1,6 +1,6 @@
-import { AppContainerPersonagens } from "../componentes/AppContainerPersonagens"
-import CardPersonagens from "../componentes/CardPersonagens"
-import tophImg from '../imagens/Toph.png'
+import { AppContainerPersonagens } from "../../componentes/AppContainerPersonagens"
+import CardPersonagens from "../../componentes/CardPersonagens"
+import tophImg from '../../imagens/Toph.png'
 
 const Toph = () => {
 

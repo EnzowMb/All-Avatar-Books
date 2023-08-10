@@ -1,18 +1,18 @@
 const fs = require("fs")
 
 function getTodasHQs() {
-    return JSON.parse( fs.readFileSync("HQs.json") )
+    return JSON.parse( fs.readFileSync("./JSONs/HQs.json") )
 }
 
 function getHQPorId(id) {
-    const hqs = JSON.parse( fs.readFileSync("HQs.json") )
+    const hqs = JSON.parse( fs.readFileSync("./JSONs/HQs.json") )
 
     const hqsFiltradas = hqs.filter(hq => hq.id === id)[0]
     return hqsFiltradas
 }
 
 function insereHQ(hqNova) {
-    const hqs = JSON.parse( fs.readFileSync("HQs.json") )
+    const hqs = JSON.parse( fs.readFileSync("./JSONs/HQs.json") )
 
     const listaNovaHQs = [ ...hqs, hqNova ]
 
@@ -20,7 +20,7 @@ function insereHQ(hqNova) {
 }
 
 function modificaHQ(modficacoes, id) {
-    let hqsAtuais = JSON.parse( fs.readFileSync("HQs.json") )
+    let hqsAtuais = JSON.parse( fs.readFileSync("./JSONs/HQs.json") )
 
     const indiceModificado = hqsAtuais.findIndex(hq => hq.id === id)
 
@@ -32,7 +32,7 @@ function modificaHQ(modficacoes, id) {
 }
 
 function deletarHQPorId(id) {
-    const hqs = JSON.parse( fs.readFileSync("HQs.json") )
+    const hqs = JSON.parse( fs.readFileSync("./JSONs/HQs.json") )
 
     const hqsFiltradas = hqs.filter( hq => hq.id !== id)
 

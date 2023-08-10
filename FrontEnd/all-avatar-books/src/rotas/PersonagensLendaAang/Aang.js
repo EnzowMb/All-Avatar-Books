@@ -1,6 +1,6 @@
-import aangImg from "../imagens/Aang.png"
-import CardPersonagens from "../componentes/CardPersonagens"
-import { AppContainerPersonagens } from "../componentes/AppContainerPersonagens"
+import aangImg from "../../imagens/Aang.png"
+import CardPersonagens from "../../componentes/CardPersonagens"
+import { AppContainerPersonagens } from "../../componentes/AppContainerPersonagens"
 
 const Aang = () => {
 

@@ -5,10 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Header from './componentes/Header';
-import Aang from './rotas/Aang';
-import Toph from './rotas/Toph';
-import Katara from './rotas/Katara'
-import Sokka from './rotas/Sokka'
+import Aang from './rotas/PersonagensLendaAang/Aang';
+import Toph from './rotas/PersonagensLendaAang/Toph';
+import Katara from './rotas/PersonagensLendaAang/Katara'
+import Sokka from './rotas/PersonagensLendaAang/Sokka'
 import Favoritos from './rotas/Favoritos';
 import HqKorra from './rotas/HqKorra';
 
@@ -29,6 +29,10 @@ const GlobalStyle = createGlobalStyle`
 
   li {
     list-style: none;
+  }
+
+  a {
+    text-decoration: none;
   }
 `
 

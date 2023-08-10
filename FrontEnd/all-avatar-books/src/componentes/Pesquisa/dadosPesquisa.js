@@ -9,7 +9,7 @@ import theRift from '../../imagens/The Rift.jpg'
 import tophMetalbending from '../../imagens/Toph Beifongs Metalbending Academy.jpg'
 
 
-export const HQS = [
+export const hqsAangKorra = [
     {nome: 'Team Avatar Tales', id: 1, src: teamAvatarTales},
     {nome: 'Katara and the Pirates Silver', id: 2, src: kataraPiratesSilver},
     {nome: 'Suki, Alone', id: 3, src: sukiAlone},
